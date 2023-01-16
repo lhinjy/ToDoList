@@ -1,7 +1,12 @@
 import "./App.css";
 import { useState, useCallback, useEffect, useMemo } from "react";
 import UseReducerExample from "./components/UseReducerExample";
-
+import NoTransitionExample from "./components/NoTransitionExample";
+import UseDeferredValueExample from "./components/UseDeferredValueExample";
+import SearchBar from "./components/SearchBar";
+import FormInput from "./components/FormInput";
+import Video from "./components/Video";
+import PreviousPrice from "./components/PreviousPrice";
 function App() {
   const [userNumber, setUserNumber] = useState("");
   const [randomInput, setRandomInput] = useState("");
@@ -16,13 +21,16 @@ function App() {
   // const fibNumber = fib(userNumber);
 
   // useMemo is usually used together with useCallback
-  const fib = (n) => {
-    return n <= 1 ? n : fib(n - 1) + fib(n - 2);
-  };
-  const fibNumber = useMemo(() => fib(userNumber), userNumber);
+  // const fib = (n) => {
+  //   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+  // };
+  // const fibNumber = useMemo(() => fib(userNumber), userNumber);
   return (
     <div className="App">
-      {" "}
+      {/* <FormInput /> */}
+      {/* <Video /> */}
+      <PreviousPrice />
+      {/* {" "}
       <label>Fibonacci Sequence:</label>
       <input
         type="number"
@@ -39,7 +47,10 @@ function App() {
         onChange={(e) => setRandomInput(e.target.value)}
       />
       <p>{randomInput}</p>
-      <UseReducerExample />
+      <UseReducerExample /> */}
+      {/* <NoTransitionExample /> */}
+      {/* <UseDeferredValueExample /> */}
+      {/* <SearchBar /> */}
     </div>
   );
 }
